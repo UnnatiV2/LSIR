@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background for the page */
+    color: #e0e0e0; /* Light gray text */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent both horizontal and vertical overflow */
+}
+
+/* Particle Canvas */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure canvas covers full viewport width */
+    height: 100vh; /* Ensure canvas covers full viewport height */
+    z-index: -1; /* Place canvas behind the content */
+    display: block; /* Remove any default inline spacing */
+}
+
+/* Header Styles */
+header {
+    background-color: #121212;
+    padding: 0px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    position: relative; /* Make sure header is positioned above canvas */
+    z-index: 1; /* Ensure header is above the canvas */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left h2 {
+    margin: 0;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.nav-right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-right ul li {
+    margin: 0;
+}
+
+.nav-right ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-right ul li a:hover {
+    color: #ff4081; /* Pink text on hover */
+}
+
+/* Main Content Styles */
+main {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(18, 18, 18, 0.8); /* Transparent dark background */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: #e0e0e0; /* Ensure text is readable on dark background */
+    border: 2px solid transparent; /* Make border transparent initially */
+    animation: glowing-border 3s infinite; /* Add animation */
+}
+
+@keyframes glowing-border {
+    0% {
+        border-color: rgba(255, 105, 180, 0.5);
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+        border-color: rgba(255, 105, 180, 1);
+        box-shadow: 0 0 20px rgba(255, 105, 180, 1);
+    }
+    100% {
+        border-color: rgba(255, 105, 180, 0.5);
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+}
+
+main h1, main h2 {
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2em;
+    color: #ff4081; /* Pink text */
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 1.5em;
+    color: #e0e0e0; /* Light gray text */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    max-width: 700px; /* Limit paragraph width */
+    text-align: center;
+    color: #e0e0e0; /* Light gray text */
+    transition: color 0.3s ease;
+}
+
+main p:hover {
+    color: #ff4081; /* Change text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    main h2 {
+        font-size: 1.2em;
+    }
+
+    main p {
+        font-size: 0.9em;
+    }
+}

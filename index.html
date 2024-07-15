@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text To Image</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas> <!-- Add this line -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <h2>Image Generation</h2>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="beta.html">Beta</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Generate Your Dream Images</h1>
+  </header>
+  
+  <main class="animated-border-box">
+    <section class="input-section">
+      <label for="input">Create an image from text prompt:</label>
+      <div class="input-container">
+        <input type="text" id="input" placeholder="Enter your text prompt">
+        <button id="btn">Generate</button>
+      </div>
+    </section>
+    <section class="image-section">
+      <div id="loading-bar-container">
+        <div id="loading-bar"></div>
+      </div>
+      <img id="image" src="">
+    </section>
+  </main>
+  <script src="js/particles.js"></script> <!-- Add this line -->
+  <script src="js/script.js"></script>
+</body>
+</html>
